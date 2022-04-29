@@ -1,6 +1,7 @@
 #include "ft_list.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)());
 
@@ -67,7 +68,7 @@ int main(void)
 	printf("orig list:\n");
 	print_list(lst);
 	ft_list_remove_if(&lst, (void *)data_ref, cmp);
-	printf("\n(case:'%s') editted list:\n", (char *) data_ref);
+	printf("\n(case:'%s') editted list:\n", data_ref);
 	print_list(lst);
 	return (0);
 }
